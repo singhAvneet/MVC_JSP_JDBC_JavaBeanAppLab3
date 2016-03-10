@@ -38,20 +38,17 @@
     </label>     
   </fieldset>
   <fieldset class="account-action">
-    <input class="btn" type="submit" name="submit" value="Login">    
+    <input class="btn" type="submit" name="submit" value="Order">    
   </fieldset>
 </form>
 
 
 
 
- <form method="post" action="OrderController">
- <h1 style="margin-left: 80px">Online Order Service</h1>
-<p style="font-size: 100%;">Fill this online form for a pizza dilivery</p>
-<h2>Hot Pizza</h2>
- 
+ <form method="get" action="OrderController">
+ <label>     UserName:<span> <input type ="text" name="name" size="20" id="name"></span>   </label>
   <fieldset class="account-action">
-    <input class="btn" type="submit" name="submit" value="Order">    
+    <input class="btn" type="submit" name="submit" value="Show My Order">    
   </fieldset>
 </form>
 
