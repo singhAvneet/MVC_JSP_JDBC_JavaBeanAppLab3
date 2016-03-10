@@ -8,6 +8,15 @@ margin-top: 5%;
     margin-left: 32%;
   
 }
+sideBar{
+	border: 5px solid #c6c7cc;
+  border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 400px;
+  margin-left:400px;
+ background: #7c7c80;
+}
 form {
   border: 5px solid #c6c7cc;
   border-radius: 5px;

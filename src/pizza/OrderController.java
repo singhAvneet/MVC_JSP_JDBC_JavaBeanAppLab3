@@ -28,6 +28,8 @@ public class OrderController extends HttpServlet {
 	ResultSet rs;
 	PreparedStatement ps; 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int orderId = 0;
+		String toppings = null,payment=null;
 		String name = request.getParameter("name");	
 		PrintWriter pw=response.getWriter();
 		try{
@@ -35,17 +37,17 @@ public class OrderController extends HttpServlet {
 			con=DriverManager.getConnection("jdbc:mysql://localhost/customer?user=root&password=admin");
 			ps=con.prepareStatement("Select * from customer.orders_table where username='"+name+"'"); 
 			rs=ps.executeQuery();
-			pw.println("<html>");
-			pw.println("<body><h1>Product Details</h1>");
+		
 			while(rs.next()){
-				int orderId=rs.getInt(1);
-				String toppings=rs.getString(2);
-				String payment=rs.getString(3);
-				String username=rs.getString(4);
-				pw.println(toppings);
+				 toppings+=rs.getString(1);
 			}
-			pw.println("</html>");
-			pw.println("</body>");
+			Order_Bean order_beam=new Order_Bean();
+			order_beam.setOrderId(toppings);
+			
+			 
+			request.setAttribute("order_beam",order_beam);
+			RequestDispatcher rd=request.getRequestDispatcher("orderDeatils.jsp");  
+			rd.forward(request, response);
 		}
 		catch(ClassNotFoundException e){
 			pw.println(e);
@@ -77,13 +79,7 @@ public class OrderController extends HttpServlet {
 		}
 		
 		PrintWriter pw=response.getWriter();
-		/*OrderBean Orderbean=new OrderBean();  
-		Orderbean.setUsername(name);  
-		Orderbean.setAddress(addres); 
-		Orderbean.setphone(phone);  
-		Orderbean.setToppings(toppings); 
-		Orderbean.setPayments(payment); 
-		request.setAttribute("Orderbean",Orderbean);*/
+		
 		User_Bean user_beam=new User_Bean();  
 		user_beam.setUsername(name);  
 		user_beam.setAddres(addres); 

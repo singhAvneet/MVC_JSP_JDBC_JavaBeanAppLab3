@@ -45,7 +45,7 @@
 
 
 
- <form method="get" action="OrderController">
+ <form method="post" action="ShowController" id="sideBar">
  <label>     UserName:<span> <input type ="text" name="name" size="20" id="name"></span>   </label>
   <fieldset class="account-action">
     <input class="btn" type="submit" name="submit" value="Show My Order">    
