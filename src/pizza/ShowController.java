@@ -27,6 +27,11 @@ public class ShowController extends HttpServlet {
 	Statement st;
 	ResultSet rs;
 	PreparedStatement ps; 
+	
+	
+	
+	
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String orderId = "",payment=null;

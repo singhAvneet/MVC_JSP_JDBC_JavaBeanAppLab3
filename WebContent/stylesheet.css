@@ -1,0 +1,74 @@
+@CHARSET "ISO-8859-1";
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+body{
+margin-top: 5%;
+    margin-left: 32%;
+  
+}
+div{
+	width: 454px;
+	border: 2px solid  #4d4dff;
+	margin-right: auto;
+	margin-left: auto;
+	}
+form {
+
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 450px;
+  background: #e6e6ff;
+  border-bottom: 2px solid  #4d4dff;
+  padding: 10px;
+}
+.account-action .btn {
+  background: linear-gradient(#49708f, #293f50);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  padding: 8px 16px;
+}
+h1{
+	color:#b300b3; 
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color: #b300b3;
+}
+a:HOVER{
+	text-decoration: underline;
+	text-decoration: overline;
+}
+#center{
+	text-align: center;
+}
+.info{
+	color:#395870;
+	font-size: 100%; 
+	margin-left: 5px;
+}
+
+li{
+	margin-left: 2px;
+    margin-right: 5px;
+}
+
+input {
+  border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+.btn{
+	background-color: #b300b3;
+	color: #e6e6ff;
+	font-weight: bold;
+}
+
